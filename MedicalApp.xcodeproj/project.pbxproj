@@ -14,9 +14,11 @@
 		0463FAA2200CAD45007AD35B /* MedicalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463FAA1200CAD45007AD35B /* MedicalAppTests.swift */; };
 		0463FAAD200CAD45007AD35B /* MedicalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463FAAC200CAD45007AD35B /* MedicalAppUITests.swift */; };
 		0463FABB200CAD72007AD35B /* Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463FABA200CAD72007AD35B /* Structure.swift */; };
+		046C3432201004BC0029C9D9 /* MVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C3431201004BC0029C9D9 /* MVC.swift */; };
+		0492BE732011536700CB535E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492BE722011536700CB535E /* TableViewController.swift */; };
+		0492BE75201155EA00CB535E /* PatientDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492BE74201155EA00CB535E /* PatientDetailsViewController.swift */; };
 		049E55A0200E2FE30076A1AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E559F200E2FE30076A1AC /* MenuViewController.swift */; };
 		049E55A2200E2FEE0076A1AC /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E55A1200E2FEE0076A1AC /* AddPatientViewController.swift */; };
-		049E55A4200E30230076A1AC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E55A3200E30230076A1AC /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +52,11 @@
 		0463FAAC200CAD45007AD35B /* MedicalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalAppUITests.swift; sourceTree = "<group>"; };
 		0463FAAE200CAD45007AD35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0463FABA200CAD72007AD35B /* Structure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structure.swift; sourceTree = "<group>"; };
+		046C3431201004BC0029C9D9 /* MVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVC.swift; sourceTree = "<group>"; };
+		0492BE722011536700CB535E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		0492BE74201155EA00CB535E /* PatientDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetailsViewController.swift; sourceTree = "<group>"; };
 		049E559F200E2FE30076A1AC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		049E55A1200E2FEE0076A1AC /* AddPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
-		049E55A3200E30230076A1AC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				0463FA8C200CAD45007AD35B /* AppDelegate.swift */,
-				0463FABA200CAD72007AD35B /* Structure.swift */,
-				049E55A1200E2FEE0076A1AC /* AddPatientViewController.swift */,
 				049E559F200E2FE30076A1AC /* MenuViewController.swift */,
-				049E55A3200E30230076A1AC /* SearchViewController.swift */,
+				049E55A1200E2FEE0076A1AC /* AddPatientViewController.swift */,
+				0492BE722011536700CB535E /* TableViewController.swift */,
+				0492BE74201155EA00CB535E /* PatientDetailsViewController.swift */,
+				0463FABA200CAD72007AD35B /* Structure.swift */,
+				046C3431201004BC0029C9D9 /* MVC.swift */,
 				0463FA90200CAD45007AD35B /* Main.storyboard */,
 				0463FA93200CAD45007AD35B /* Assets.xcassets */,
 				0463FA95200CAD45007AD35B /* LaunchScreen.storyboard */,
@@ -268,10 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049E55A4200E30230076A1AC /* SearchViewController.swift in Sources */,
+				0492BE75201155EA00CB535E /* PatientDetailsViewController.swift in Sources */,
+				0492BE732011536700CB535E /* TableViewController.swift in Sources */,
 				0463FA8D200CAD45007AD35B /* AppDelegate.swift in Sources */,
 				049E55A0200E2FE30076A1AC /* MenuViewController.swift in Sources */,
 				049E55A2200E2FEE0076A1AC /* AddPatientViewController.swift in Sources */,
+				046C3432201004BC0029C9D9 /* MVC.swift in Sources */,
 				0463FABB200CAD72007AD35B /* Structure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,17 +1,21 @@
 //
-//  SearchViewController.swift
+//  PatientDetailsViewController.swift
 //  MedicalApp
 //
-//  Created by Seena Shafai on 16/01/2018.
+//  Created by Seena Shafai on 18/01/2018.
 //  Copyright © 2018 Seena Shafai. All rights reserved.
 //
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class PatientDetailsViewController: UIViewController {
 
+    var patient: [(String, String, String, Int, Int )] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(patient)
 
         // Do any additional setup after loading the view.
     }

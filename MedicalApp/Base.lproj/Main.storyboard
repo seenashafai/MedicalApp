@@ -83,7 +83,7 @@
         <!--System Search-->
         <scene sceneID="yKL-c3-nCF">
             <objects>
-                <tableViewController id="W6A-NU-8oB" sceneMemberID="viewController">
+                <tableViewController id="W6A-NU-8oB" customClass="TableViewController" customModule="MedicalApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="caL-sb-GKP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,6 +96,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Pc6-F3-euf" kind="show" identifier="showDetail" id="5wy-Fv-jRF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -108,6 +111,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCx-Wl-aqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="959"/>
+        </scene>
+        <!--Patient Details View Controller-->
+        <scene sceneID="AiW-tp-pAK">
+            <objects>
+                <viewController id="Pc6-F3-euf" customClass="PatientDetailsViewController" customModule="MedicalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fOB-R8-Q5L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7d-1m-Rpx">
+                                <rect key="frame" x="145" y="131" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Cvd-LW-3Ww"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kpY-HK-Nsf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421.5999999999999" y="957.57121439280365"/>
         </scene>
         <!--Add Patient-->
         <scene sceneID="uwl-pY-wwa">
@@ -167,6 +194,10 @@
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mZ-0b-gcl">
                                         <rect key="frame" x="8" y="311" width="289" height="160"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="cyJ-0T-0UE" id="yLy-Jt-7U0"/>
+                                            <outlet property="delegate" destination="cyJ-0T-0UE" id="w76-wF-j1f"/>
+                                        </connections>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nature of Medical Issue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfx-WZ-V2J">
                                         <rect key="frame" x="62.5" y="282" width="180" height="21"/>
@@ -204,6 +235,31 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsF-Nb-aLJ">
+                                        <rect key="frame" x="240" y="508" width="57" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.87813595420000001" green="0.9381247304" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Go!"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpF-s9-rr2">
+                                        <rect key="frame" x="240" y="507" width="57" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.87813595420000001" green="0.9381247304" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Go!"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="autoFill:" destination="cyJ-0T-0UE" eventType="touchUpInside" id="xaF-YG-LNE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.91719964378238339" green="0.91719964378238339" blue="0.91719964378238339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -251,8 +307,20 @@
                         <viewLayoutGuide key="safeArea" id="9Pw-HT-thT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Patient" id="1GB-YE-iGt">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="tXq-8D-XMw"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="tXq-8D-XMw">
+                            <connections>
+                                <action selector="doneAction:" destination="cyJ-0T-0UE" id="NGZ-Jv-y4r"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ageTextField" destination="7Hh-Mn-NHy" id="uxH-Ro-c1r"/>
+                        <outlet property="doneBarButton" destination="tXq-8D-XMw" id="glL-sA-MPa"/>
+                        <outlet property="firstNameTextField" destination="Xq4-RJ-TtL" id="5FS-Gt-tcP"/>
+                        <outlet property="medicalPickerView" destination="8mZ-0b-gcl" id="ZBw-EG-tgm"/>
+                        <outlet property="severityTextField" destination="F32-fR-oos" id="7EH-MF-4cv"/>
+                        <outlet property="surnameTextField" destination="8bF-Yt-89P" id="iE7-EA-58Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhg-Ki-Sj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

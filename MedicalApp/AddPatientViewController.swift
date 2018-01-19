@@ -8,8 +8,75 @@
 
 import UIKit
 
-class AddPatientViewController: UIViewController {
+class AddPatientViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    //MARK: - Properties
+    var medicalIssueArray = ["Please Select Issue...","Physical", "Mental"]
+    var injury: String = ""
+    
 
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var surnameTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var medicalPickerView: UIPickerView!
+    @IBOutlet weak var severityTextField: UITextField!
+    @IBOutlet weak var doneBarButton: UIBarButtonItem!
+    
+    @IBAction func autoFill(_ sender: Any)
+    {
+        firstNameTextField.text = "Jeff"
+        surnameTextField.text = "TheRock"
+        ageTextField.text = String(69)
+        severityTextField.text = String(5)
+        medicalPickerView.selectRow(2, inComponent: 0, animated: true)
+    }
+    
+    @IBAction func doneAction(_ sender: Any)
+    {
+
+        populateTuple()
+        print(patientList)
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int
+    {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        return medicalIssueArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+        return medicalIssueArray[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        injury = medicalIssueArray[row]
+        print(injury)
+    }
+    
+    
+    //MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        print("jeff")
+    }
+    
+    private func populateTuple()
+    {
+        let firstName = String(describing: firstNameTextField.text!)
+        let surname = String(describing: surnameTextField.text!)
+        let age = Int(ageTextField.text!)
+        let severity = Int(severityTextField.text!)
+        let patientDetails = (firstname: firstName, surname: surname, injury: injury, severity: severity, age: age)
+        patientList.append(patientDetails as! (String, String, String, Int, Int))
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,16 +87,6 @@ class AddPatientViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
