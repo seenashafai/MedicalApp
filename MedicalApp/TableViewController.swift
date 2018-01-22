@@ -40,23 +40,16 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell()
-        selectedPatient = [patientList[indexPath.row]]
-        cell.textLabel!.text = selectedPatient[0]
+        let selectedPatient = patientList[indexPath.row]
+        cell.textLabel!.text = selectedPatient.0
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        selectedIndex = indexPath.row
         self.performSegue(withIdentifier: "showDetail", sender: self)
     }
 
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        
-        let destVC = segue.destination as! PatientDetailsViewController
-        destVC.patient =
-    }
-    
 }

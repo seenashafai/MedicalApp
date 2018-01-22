@@ -17,6 +17,7 @@
 		046C3432201004BC0029C9D9 /* MVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C3431201004BC0029C9D9 /* MVC.swift */; };
 		0492BE732011536700CB535E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492BE722011536700CB535E /* TableViewController.swift */; };
 		0492BE75201155EA00CB535E /* PatientDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492BE74201155EA00CB535E /* PatientDetailsViewController.swift */; };
+		049BDCDF20122685004794CB /* InputMedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BDCDE20122685004794CB /* InputMedicationViewController.swift */; };
 		049E55A0200E2FE30076A1AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E559F200E2FE30076A1AC /* MenuViewController.swift */; };
 		049E55A2200E2FEE0076A1AC /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E55A1200E2FEE0076A1AC /* AddPatientViewController.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		046C3431201004BC0029C9D9 /* MVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVC.swift; sourceTree = "<group>"; };
 		0492BE722011536700CB535E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		0492BE74201155EA00CB535E /* PatientDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetailsViewController.swift; sourceTree = "<group>"; };
+		049BDCDE20122685004794CB /* InputMedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputMedicationViewController.swift; path = Assets.xcassets/InputMedicationViewController.swift; sourceTree = "<group>"; };
 		049E559F200E2FE30076A1AC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		049E55A1200E2FEE0076A1AC /* AddPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				049E55A1200E2FEE0076A1AC /* AddPatientViewController.swift */,
 				0492BE722011536700CB535E /* TableViewController.swift */,
 				0492BE74201155EA00CB535E /* PatientDetailsViewController.swift */,
+				049BDCDE20122685004794CB /* InputMedicationViewController.swift */,
 				0463FABA200CAD72007AD35B /* Structure.swift */,
 				046C3431201004BC0029C9D9 /* MVC.swift */,
 				0463FA90200CAD45007AD35B /* Main.storyboard */,
@@ -276,6 +279,7 @@
 			files = (
 				0492BE75201155EA00CB535E /* PatientDetailsViewController.swift in Sources */,
 				0492BE732011536700CB535E /* TableViewController.swift in Sources */,
+				049BDCDF20122685004794CB /* InputMedicationViewController.swift in Sources */,
 				0463FA8D200CAD45007AD35B /* AppDelegate.swift in Sources */,
 				049E55A0200E2FE30076A1AC /* MenuViewController.swift in Sources */,
 				049E55A2200E2FEE0076A1AC /* AddPatientViewController.swift in Sources */,

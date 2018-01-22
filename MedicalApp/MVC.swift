@@ -8,6 +8,9 @@
 
 import Foundation
 
-public var patientList: [(String, String, String, Int, Int )] = []
+public var patientList: [(String, String, Int, Int, Int, [[String]] )] = []
 
+public var selectedIndex: Int = 0
+
+public var medicalIssueArray = ["Please Select Issue...","Physical", "Mental"]
 

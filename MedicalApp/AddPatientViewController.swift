@@ -11,8 +11,7 @@ import UIKit
 class AddPatientViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     //MARK: - Properties
-    var medicalIssueArray = ["Please Select Issue...","Physical", "Mental"]
-    var injury: String = ""
+    var injury: Int = 0
     
 
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -56,7 +55,7 @@ class AddPatientViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        injury = medicalIssueArray[row]
+        injury = row
         print(injury)
     }
     
@@ -74,8 +73,9 @@ class AddPatientViewController: UIViewController, UIPickerViewDelegate, UIPicker
         let surname = String(describing: surnameTextField.text!)
         let age = Int(ageTextField.text!)
         let severity = Int(severityTextField.text!)
-        let patientDetails = (firstname: firstName, surname: surname, injury: injury, severity: severity, age: age)
-        patientList.append(patientDetails as! (String, String, String, Int, Int))
+        let medArray = [[String]]()
+        let patientDetails = (firstname: firstName, surname: surname, injury: injury, severity: severity, age: age, medArray: medArray )
+        patientList.append(patientDetails as! (String, String, Int, Int, Int, [[String]]))
     }
     override func viewDidLoad() {
         super.viewDidLoad()
